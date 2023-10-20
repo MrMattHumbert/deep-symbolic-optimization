@@ -2,7 +2,7 @@ from setuptools import setup
 import os
 from setuptools import dist
 
-dist.Distribution().fetch_build_eggs(['Cython', 'numpy'])
+dist.Distribution().fetch_build_eggs(['Cython', 'numpy<=1.19'])
 
 import numpy
 from Cython.Build import cythonize
@@ -24,7 +24,8 @@ required = [
     "tqdm",
     "commentjson",
     "PyYAML",
-    "prettytable"
+    "prettytable",
+    "protobuff==3.19.4"
 ]
 
 extras = {
